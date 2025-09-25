@@ -1,2 +1,11 @@
 ---
 # tasks file for homelab
+- name: Update package cache.
+  package:
+    update_cache: yes
+
+- name: Install homelab packages.
+  package:
+    name: "{{ homelab_packages }}"
+    state: "{{ homelab_packages_state }}"
+  ignore_errors: "{{ ansible_check_mode }}"

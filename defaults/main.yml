@@ -1,2 +1,11 @@
 ---
 # defaults file for homelab
+homelab_packages:
+  - curl
+  - vim
+  - openjdk-17-jdk
+  - ethtool
+  - git
+  - stow
+
+homelab_packages_state: present
