@@ -1,11 +1,17 @@
 ---
 # tasks file for homelab
 - name: Update package cache.
-  package:
+  ansible.builtin.package:
     update_cache: yes
 
 - name: Install homelab packages.
-  package:
+  ansible.builtin.package:
     name: "{{ homelab_packages }}"
     state: "{{ homelab_packages_state }}"
   ignore_errors: "{{ ansible_check_mode }}"
+
+- name: Create HDD directory with specific rights
+  ansible.builtin.file:
+    path: /mnt/wd1tb
+    state: directory
+    mode: '0755'
