@@ -7,5 +7,6 @@ homelab_packages:
   - ethtool
   - git
   - stow
+  - sysstat
 
 homelab_packages_state: present
