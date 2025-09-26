@@ -10,3 +10,5 @@ homelab_packages:
   - sysstat
 
 homelab_packages_state: present
+
+homelab_user: admin
