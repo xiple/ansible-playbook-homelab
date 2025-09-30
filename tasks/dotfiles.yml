@@ -1,0 +1,4 @@
+- name: Clone xiple's dotfiles repository
+  ansible.builtin.git:
+    repo: 'https://github.com/xiple/dotfiles'
+    dest: ~/dotfiles

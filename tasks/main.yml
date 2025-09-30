@@ -1,5 +1,4 @@
 ---
-# tasks file for homelab
 - name: Update package cache.
   ansible.builtin.package:
     update_cache: yes
@@ -9,14 +8,6 @@
     name: "{{ homelab_packages }}"
     state: "{{ homelab_packages_state }}"
   ignore_errors: "{{ ansible_check_mode }}"
-
-- name: Ensure default homelab user '{{ homelab_user }}' is created
-  ansible.builtin.user:
-    name: "{{ homelab_user }}"
-    shell: /bin/bash
-    create_home: yes
-    groups: docker
-    append: yes
 
 - name: Create HDD directory with specific rights
   ansible.builtin.file:
