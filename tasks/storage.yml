@@ -1,4 +1,3 @@
----
 - name: Create HDD directory with specific rights.
   ansible.builtin.file:
     path: /mnt/wd1tb

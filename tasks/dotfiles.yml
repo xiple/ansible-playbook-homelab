@@ -1,3 +1,8 @@
+- name: Install packages for dotfiles configuration.
+  ansible.builtin.package:
+    name: "{{ dotfiles_packages }}"
+    state: "{{ dotfiles_packages_state }}"
+
 - name: Clone xiple's dotfiles repository.
   ansible.builtin.git:
     repo: 'https://github.com/xiple/dotfiles'

@@ -7,11 +7,15 @@ homelab_packages:
   - vim
   - openjdk-17-jdk
   - ethtool
-  - git
-  - stow
   - sysstat
 
 homelab_packages_state: present
+
+dotfiles_packages:
+  - git
+  - stow
+
+dotfiles_packages_state: present
 
 kvm_packages:
   - qemu-system
