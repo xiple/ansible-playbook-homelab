@@ -1,5 +1,6 @@
 ---
-docker_users: vagrant
+homelab_user: vagrant
+docker_users: "{{ homelab_user }}"
 
 homelab_packages:
   - curl

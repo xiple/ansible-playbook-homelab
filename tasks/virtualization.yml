@@ -5,6 +5,12 @@
     state: "{{ kvm_packages_state }}"
     install_recommends: no
 
+- name: Ensure {{ homelab_user }} user is part of libvirt group.
+  user:
+    name: "{{ homelab_user }}"
+    groups: libvirt
+    append: true
+
 - name: Install vagrant.
   ansible.builtin.apt:
     name: "{{ vagrant_packages }}"
