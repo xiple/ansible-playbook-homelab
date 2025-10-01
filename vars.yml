@@ -11,3 +11,15 @@ homelab_packages:
   - sysstat
 
 homelab_packages_state: present
+
+kvm_packages:
+  - qemu-system
+  - libvirt-clients
+  - libvirt-daemon-system
+
+kvm_packages_state: present
+
+vagrant_packages:
+  - vagrant
+
+vagrant_packages_state: present

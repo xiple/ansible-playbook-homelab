@@ -12,3 +12,4 @@
     - import_tasks: tasks/main.yml
     - import_tasks: tasks/dotfiles.yml
       become: false
+    - import_tasks: tasks/virtualization.yml

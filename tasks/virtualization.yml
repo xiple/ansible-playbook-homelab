@@ -1,0 +1,11 @@
+---
+- name: Install KVM and libvirt packages.
+  ansible.builtin.apt:
+    name: "{{ kvm_packages }}"
+    state: "{{ kvm_packages_state }}"
+    install_recommends: no
+
+- name: Install vagrant.
+  ansible.builtin.apt:
+    name: "{{ vagrant_packages }}"
+    state: "{{ vagrant_packages_state }}"
