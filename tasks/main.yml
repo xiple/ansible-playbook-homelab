@@ -1,8 +1,4 @@
 ---
-- name: Update package cache.
-  ansible.builtin.package:
-    update_cache: yes
-
 - name: Install homelab packages.
   ansible.builtin.package:
     name: "{{ homelab_packages }}"

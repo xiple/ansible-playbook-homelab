@@ -5,6 +5,11 @@
   vars_files:
     - vars.yml
 
+  pre_tasks:
+    - name: Update package cache.
+      ansible.builtin.package:
+        update_cache: yes
+
   roles:
     - role: geerlingguy.docker
 
