@@ -1,4 +1,16 @@
-- name: Clone xiple's dotfiles repository
+- name: Clone xiple's dotfiles repository.
   ansible.builtin.git:
     repo: 'https://github.com/xiple/dotfiles'
     dest: ~/dotfiles
+
+- name: Use stow to install dotfiles.
+  ansible.builtin.command:
+    cmd: stow --adopt .
+    chdir: ~/dotfiles
+
+- name: Reset local repo and update.
+  ansible.builtin.git:
+    repo: 'https://github.com/xiple/dotfiles'
+    dest: ~/dotfiles
+    version: main
+    force: yes

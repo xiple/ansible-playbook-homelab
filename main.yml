@@ -9,12 +9,17 @@
     - name: Update package cache.
       ansible.builtin.package:
         update_cache: yes
+      tags: ['always']
 
   roles:
     - role: geerlingguy.docker
+      tags: ['docker']
 
   tasks:
     - import_tasks: tasks/main.yml
+      tags: ['main']
     - import_tasks: tasks/dotfiles.yml
       become: false
+      tags: ['dotfiles']
     - import_tasks: tasks/virtualization.yml
+      tags: ['virt']
