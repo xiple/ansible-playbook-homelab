@@ -20,7 +20,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Ansible provisioner.
   config.vm.provision :ansible do |ansible|
     ansible.playbook = "main.yml"
-#    ansible.tags = ['always', 'dotfiles']
+#    ansible.tags = ['always', 'docker', 'jellyfin']
   end
 
 end

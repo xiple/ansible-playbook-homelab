@@ -1,0 +1,4 @@
+---
+- name: Pull latest jellyfin image.
+  community.docker.docker_image_pull:
+    name: jellyfin/jellyfin:latest

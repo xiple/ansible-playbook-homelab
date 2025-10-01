@@ -25,3 +25,5 @@
       tags: ['dotfiles']
     - import_tasks: tasks/virtualization.yml
       tags: ['virt']
+    - import_tasks: tasks/jellyfin.yml
+      tags: ['jellyfin']
