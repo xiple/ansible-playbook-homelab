@@ -12,6 +12,9 @@
       tags: ['always']
 
   roles:
+    - role: ansible-role-dotfiles
+      become: false
+      tags: ['dotfiles']
     - role: geerlingguy.docker
       tags: ['docker']
 
@@ -20,9 +23,6 @@
       tags: ['main']
     - import_tasks: tasks/storage.yml
       tags: ['storage']
-    - import_tasks: tasks/dotfiles.yml
-      become: false
-      tags: ['dotfiles']
     - import_tasks: tasks/virtualization.yml
       tags: ['virt']
     - import_tasks: tasks/jellyfin.yml
