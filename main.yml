@@ -12,7 +12,7 @@
       tags: ['always']
 
   roles:
-    - role: ansible-role-dotfiles
+    - role: xiple.dotfiles
       become: false
       tags: ['dotfiles']
     - role: geerlingguy.docker
