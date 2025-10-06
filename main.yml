@@ -1,6 +1,7 @@
 ---
 - name: Configure homelab.
   hosts: all
+  gather_facts: no
   become: true
   vars_files:
     - vars.yml
