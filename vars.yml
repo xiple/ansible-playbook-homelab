@@ -8,6 +8,7 @@ homelab_packages:
   - openjdk-17-jdk
   - ethtool
   - sysstat
+  - neofetch
 
 homelab_packages_state: present
 
