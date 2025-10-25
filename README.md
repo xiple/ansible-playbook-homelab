@@ -1,4 +1,4 @@
-# Xiple's homelab
+# Ansible playbook for homelab creation
 
 ## Installation
 
