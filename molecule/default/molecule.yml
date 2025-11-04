@@ -8,7 +8,6 @@ ansible:
     args:
       ansible_playbook:
         - --inventory=inventory/
-        #- --tags=jellyfin
 
 dependency:
   name: galaxy
