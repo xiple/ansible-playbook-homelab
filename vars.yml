@@ -2,13 +2,14 @@
 homelab_user: vagrant
 docker_users: "{{ homelab_user }}"
 
+java_version: 21
 homelab_packages:
   - curl
   - vim
-  - openjdk-17-jdk
+  - "openjdk-{{ java_version }}-jdk"
   - ethtool
   - sysstat
-  - neofetch
+  - fastfetch
 
 homelab_packages_state: present
 

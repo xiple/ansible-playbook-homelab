@@ -1,0 +1,7 @@
+---
+- name: Converge
+  vars:
+    docker_service_manage: false
+
+  import_playbook: ../../main.yml
+  
