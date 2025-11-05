@@ -8,6 +8,7 @@ ansible:
     args:
       ansible_playbook:
         - --inventory=inventory/
+        #- --tags=tailscale
 
 dependency:
   name: galaxy

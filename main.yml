@@ -11,24 +11,33 @@
       ansible.builtin.package:
         update_cache: yes
       tags: ['always']
+
     - name: Ensure git is installed
       ansible.builtin.package:
         name: git
         state: present
+      tags: ['always']
 
   roles:
+    - role: xiple.tailscale
+      tags: ['tailscale']
+
     - role: geerlingguy.dotfiles
       #become: false
       tags: ['dotfiles']
+
     - role: geerlingguy.docker
       tags: ['docker']
 
   tasks:
     - import_tasks: tasks/main.yml
       tags: ['main']
+
     - import_tasks: tasks/storage.yml
       tags: ['storage']
+
     - import_tasks: tasks/virtualization.yml
       tags: ['virt']
+
     - import_tasks: tasks/jellyfin.yml
       tags: ['jellyfin']
