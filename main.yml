@@ -7,9 +7,9 @@
     - vars.yml
 
   pre_tasks:
-    - name: Update package cache.
-      ansible.builtin.package:
-        update_cache: yes
+    - name: Update apt package cache.
+      ansible.builtin.apt:
+        update_cache: true
       tags: ['always']
 
   roles:

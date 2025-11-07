@@ -3,4 +3,3 @@
   ansible.builtin.package:
     name: "{{ homelab_packages }}"
     state: "{{ homelab_packages_state }}"
-  ignore_errors: "{{ ansible_check_mode }}"
