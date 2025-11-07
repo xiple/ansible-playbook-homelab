@@ -1,7 +1,16 @@
 ---
 - name: Converge
+  hosts: all
+
+  pre_tasks:
+    - name: Ensure prerequisites packages (git, openssh-server) are installed
+      ansible.builtin.apt:
+        name:
+          - git
+          - openssh-server
+        state: present
+
+- import_playbook: ../../main.yml
   vars:
     docker_service_manage: false
-
-  import_playbook: ../../main.yml
   

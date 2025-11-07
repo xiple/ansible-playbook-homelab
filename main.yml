@@ -12,12 +12,6 @@
         update_cache: yes
       tags: ['always']
 
-    - name: Ensure git is installed
-      ansible.builtin.package:
-        name: git
-        state: present
-      tags: ['always']
-
   roles:
     - role: xiple.tailscale
       tags: ['tailscale']
