@@ -42,3 +42,9 @@ dotfiles_files:
   - .gitignore
   - .inputrc
   - .vimrc
+
+security_ssh_config_path: /etc/ssh/sshd_config
+security_ssh_password_authentication: "yes"
+security_ssh_permit_root_login: "no"
+security_ssh_permit_empty_password: "no"
+security_ssh_x11_forwarding: "no"
