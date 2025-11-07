@@ -1,5 +1,6 @@
 ---
 homelab_user: vagrant
+sftp_user: sftp
 docker_users: "{{ homelab_user }}"
 
 java_version: 21

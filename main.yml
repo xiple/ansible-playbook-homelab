@@ -27,6 +27,9 @@
     - import_tasks: tasks/sshd.yml
       tags: ['sshd']
 
+    - import_tasks: tasks/users.yml
+      tags: ['users']
+
     - import_tasks: tasks/packages.yml
       tags: ['packages']
 
