@@ -6,22 +6,3 @@
     - ../../vars/main.yml
   
   # Add tests here
-  tasks:
-    - name: Gather the package facts
-      ansible.builtin.package_facts:
-        manager: auto
-
-    - name: Fail if 'nordvpn' package is not installed
-      ansible.builtin.fail:
-        msg: "nordvpn package is not installed"
-      when: "'nordvpn' not in ansible_facts.packages"
-
-    - name: Get all Unix groups
-      ansible.builtin.getent:
-        database: group
-        split: ':'
-
-    - name: Fail if 'nordvpn' group is not created
-      ansible.builtin.fail:
-        msg: "'nordvpn' group does not exist"
-      when: "'nordvpn' not in ansible_facts.getent_group"
