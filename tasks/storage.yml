@@ -7,7 +7,7 @@
 - name: Add backup entry in fstab but don’t mount.
   ansible.posix.mount:
     path: /mnt/wd1tb
-    src: /dev/sda1
+    src: /dev/sdb1
     fstype: ext4 
     opts: defaults,nofail
     state: present
