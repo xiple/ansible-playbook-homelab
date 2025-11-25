@@ -2,11 +2,13 @@
 - name: Add '{{ homelab_user }}' user
   ansible.builtin.user:
     name: "{{ homelab_user }}"
+    shell: /bin/bash
     create_home: yes
 
 - name: Add '{{ sftp_user }}' user
   ansible.builtin.user:
     name: "{{ sftp_user }}"
+    shell: /bin/bash
     create_home: yes
 
 - name: Add read rights to '{{ sftp_user }}' home directory
