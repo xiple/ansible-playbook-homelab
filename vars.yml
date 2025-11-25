@@ -5,6 +5,7 @@ docker_users: "{{ homelab_user }}"
 
 java_version: 21
 homelab_packages:
+  - avahi-daemon
   - curl
   - vim
   - git
