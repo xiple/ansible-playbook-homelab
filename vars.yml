@@ -22,6 +22,7 @@ homelab_packages:
   - fastfetch
   - exif
   - tree
+  - stow
 
 homelab_packages_state: present
 
