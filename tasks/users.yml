@@ -5,6 +5,15 @@
     shell: /bin/bash
     create_home: yes
 
+- name: Ensure {{ homelab_user }} user directories are created
+  ansible.builtin.file:
+    path: "{{ item }}"
+    state: directory
+    mode: "0755"
+    owner: "{{ homelab_user }}"
+    group: "{{ homelab_user }}"
+  loop: "{{ homelab_user_dirs }}"
+
 - name: Add '{{ sftp_user }}' user
   ansible.builtin.user:
     name: "{{ sftp_user }}"

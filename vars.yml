@@ -3,6 +3,12 @@ homelab_user: vagrant
 sftp_user: sftp
 docker_users: "{{ homelab_user }}"
 
+homelab_user_dirs:
+  - "~{{ homelab_user}}/work"
+  - "~{{ homelab_user}}/apps"
+  - "~{{ homelab_user}}/apps/jellyfin/config"
+  - "~{{ homelab_user}}/apps/jellyfin/cache"
+
 java_version: 21
 homelab_packages:
   - avahi-daemon
