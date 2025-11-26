@@ -7,20 +7,16 @@
 3. Clone or download this repository to your local drive
 4. Update inventory file `inventory` if needed.
 5. Run `ansible-galaxy install -r requirements.yml` inside this directory to install required Ansible roles.
-6. Run `ansible-playbook main.yml --ask-become-pass` inside this directory.
+6. Run the playbook with :
 
-## Test the playbook
-
-Test the playbook using Vagrant. A `Vagrantfile` is included in the project.
-
-```sh
-cd ansible-playbook-homelab
-vagrant up
-
-# if you need to restart ansible provisioning, run :
-vagrant provision
+```bash
+ansible-playbook main.yml \
+    --ask-become-pass \
+    --extra-vars "homelab_user=debian"
 ```
 
 ## Notes
 
-Tested on Debian 12.
+This playbook has been tested with molecule using a Debian 13 podman image.
+
+Run `molecule test` to start the entire molecule test workflow (need molecule to be installed).
