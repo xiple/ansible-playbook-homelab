@@ -21,6 +21,7 @@ homelab_packages:
   - sysstat
   - fastfetch
   - exif
+  - tree
 
 homelab_packages_state: present
 
