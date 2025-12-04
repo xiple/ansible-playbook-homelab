@@ -13,4 +13,3 @@
 - import_playbook: ../../main.yml
   vars:
     docker_service_manage: false
-  

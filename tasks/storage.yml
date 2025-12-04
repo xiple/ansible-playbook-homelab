@@ -1,13 +1,14 @@
+---
 - name: Create HDD directory with specific rights.
   ansible.builtin.file:
     path: /mnt/wd1tb
     state: directory
     mode: '0755'
 
-- name: Add backup entry in fstab but don’t mount.
+- name: Add backup entry in fstab but do not mount.
   ansible.posix.mount:
     path: /mnt/wd1tb
     src: /dev/sdb1
-    fstype: ext4 
+    fstype: ext4
     opts: defaults,nofail
     state: present

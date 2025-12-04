@@ -3,7 +3,7 @@
   ansible.builtin.apt:
     name: "{{ kvm_packages }}"
     state: "{{ kvm_packages_state }}"
-    install_recommends: no
+    install_recommends: false
 
 - name: Ensure {{ homelab_user }} user is part of libvirt group.
   user:

@@ -1,8 +1,8 @@
 ---
 - name: Configure homelab.
   hosts: all
-  gather_facts: yes
-  #become: true
+  gather_facts: true
+  # become: true
   vars_files:
     - vars.yml
 
@@ -23,7 +23,7 @@
       tags: ['tailscale']
 
     - role: geerlingguy.dotfiles
-      #become: false
+      # become: false
       tags: ['dotfiles']
 
     - role: geerlingguy.docker

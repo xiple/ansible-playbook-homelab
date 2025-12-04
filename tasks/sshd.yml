@@ -12,7 +12,7 @@
     line: "{{ item.line }}"
     state: present
     validate: 'sshd -T -f %s'
-    mode: 0644
+    mode: "0644"
   with_items:
     - regexp: "^PasswordAuthentication"
       line: "PasswordAuthentication {{ security_ssh_password_authentication }}"
@@ -24,4 +24,3 @@
       line: "X11Forwarding {{ security_ssh_x11_forwarding }}"
   notify:
     - restart sshd
-
