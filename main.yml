@@ -30,26 +30,32 @@
       tags: ['docker']
 
   tasks:
-    - import_tasks: tasks/sshd.yml
+    - name: Import 'sshd' tasks
+      ansible.builtin.import_tasks: tasks/sshd.yml
       tags: ['sshd']
 
-    - import_tasks: tasks/users.yml
+    - name: Import 'users' tasks
+      ansible.builtin.import_tasks: tasks/users.yml
       tags: ['users']
 
-    - import_tasks: tasks/packages.yml
+    - name: Import 'packages' tasks
+      ansible.builtin.import_tasks: tasks/packages.yml
       tags: ['packages']
 
-    - import_tasks: tasks/storage.yml
+    - name: Import 'storage' tasks
+      ansible.builtin.import_tasks: tasks/storage.yml
       tags: ['storage']
 
-    - import_tasks: tasks/virtualization.yml
+    - name: Import 'virtualization' tasks
+      ansible.builtin.import_tasks: tasks/virtualization.yml
       tags: ['virt']
 
-    - import_tasks: tasks/jellyfin.yml
+    - name: Import 'jellyfin' tasks
+      ansible.builtin.import_tasks: tasks/jellyfin.yml
       tags: ['jellyfin']
 
   handlers:
-    - name: restart sshd
-      service:
+    - name: Restart sshd
+      ansible.builtin.service:
         name: sshd
         state: restarted

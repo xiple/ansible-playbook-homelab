@@ -1,11 +1,11 @@
 ---
-- name: Add '{{ homelab_user }}' user
+- name: Add homelab user
   ansible.builtin.user:
     name: "{{ homelab_user }}"
     shell: /bin/bash
     create_home: true
 
-- name: Ensure {{ homelab_user }} user directories are created
+- name: Ensure homelab user directories are created
   ansible.builtin.file:
     path: "{{ item }}"
     state: directory
@@ -14,19 +14,19 @@
     group: "{{ homelab_user }}"
   loop: "{{ homelab_user_dirs }}"
 
-- name: Add '{{ sftp_user }}' user
+- name: Add sftp_user
   ansible.builtin.user:
     name: "{{ sftp_user }}"
     shell: /bin/bash
     create_home: true
 
-- name: Add read rights to '{{ sftp_user }}' home directory
+- name: Add read rights to sftp user home directory
   ansible.builtin.file:
     path: "~{{ sftp_user }}"
     mode: "0755"
 
-- name: Ensure {{ homelab_user }} user is part of {{ sftp_user }} group
-  user:
+- name: Ensure homelab user is part of sftp group
+  ansible.builtin.user:
     name: "{{ homelab_user }}"
     groups: "{{ sftp_user }}"
     append: true

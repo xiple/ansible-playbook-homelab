@@ -1,12 +1,12 @@
 ---
 # inspired from geerlingguy 'security' role
 - name: Ensure SSH daemon is running.
-  service:
+  ansible.builtin.service:
     name: sshd
     state: started
 
 - name: Update SSH configuration to be more secure.
-  lineinfile:
+  ansible.builtin.lineinfile:
     dest: "{{ security_ssh_config_path }}"
     regexp: "{{ item.regexp }}"
     line: "{{ item.line }}"
@@ -23,4 +23,4 @@
     - regexp: "^X11Forwarding"
       line: "X11Forwarding {{ security_ssh_x11_forwarding }}"
   notify:
-    - restart sshd
+    - Restart sshd

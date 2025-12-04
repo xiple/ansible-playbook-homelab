@@ -10,6 +10,7 @@
           - openssh-server
         state: present
 
-- import_playbook: ../../main.yml
+- name: Main playbook
+  import_playbook: ../../main.yml
   vars:
     docker_service_manage: false

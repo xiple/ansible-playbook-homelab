@@ -5,8 +5,8 @@
     state: "{{ kvm_packages_state }}"
     install_recommends: false
 
-- name: Ensure {{ homelab_user }} user is part of libvirt group.
-  user:
+- name: Ensure homelab user is part of libvirt group.
+  ansible.builtin.user:
     name: "{{ homelab_user }}"
     groups: libvirt
     append: true
