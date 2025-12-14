@@ -8,7 +8,7 @@ ansible:
     args:
       ansible_playbook:
         - --inventory=inventory/
-        # ---tags=users
+        #- --tags=users
 
 dependency:
   name: galaxy
