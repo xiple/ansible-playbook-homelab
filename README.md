@@ -1,5 +1,7 @@
 # Ansible playbook for homelab creation
 
+[![CI](https://github.com/xiple/ansible-playbook-homelab/actions/workflows/ci.yml/badge.svg)](https://github.com/xiple/ansible-playbook-homelab/actions/workflows/ci.yml)
+
 ## Installation
 
 1. Install ansible.
