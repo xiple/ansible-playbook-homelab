@@ -56,6 +56,7 @@ dotfiles_files:
   - .gitignore
   - .inputrc
   - .vimrc
+  - .dir_colors
 
 security_ssh_config_path: /etc/ssh/sshd_config
 security_ssh_password_authentication: "yes"
