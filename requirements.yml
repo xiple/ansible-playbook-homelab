@@ -3,6 +3,9 @@ roles:
   - name: xiple.tailscale
     src: https://github.com/xiple/ansible-role-tailscale
 
+  - name: xiple.wol
+    src: https://github.com/xiple/ansible-role-wol
+
   - name: geerlingguy.docker
     version: 7.8.0
   - name: geerlingguy.dotfiles
