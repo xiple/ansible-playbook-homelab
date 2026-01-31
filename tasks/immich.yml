@@ -1,9 +1,16 @@
 ---
 
-- name: Install immich asset backups script
+- name: Install immich assets backup script
   ansible.builtin.template:
     src: "{{ immich_assets_backup_script_template_name }}"
     dest: "{{ immich_assets_backup_scripts_path }}"
     owner: "{{ homelab_user }}"
     group: "{{ homelab_user }}"
     mode: '0744'
+
+- name: Create a cron jobs for immich assets backup
+  ansible.builtin.cron:
+    name: "Immich assets backup"
+    special_time: "weekly"
+    job: "{{ immich_assets_backup_scripts_path }}"
+    user: "{{ homelab_user }}"
