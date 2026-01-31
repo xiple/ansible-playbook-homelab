@@ -57,6 +57,10 @@
       ansible.builtin.import_tasks: tasks/jellyfin.yml
       tags: ['jellyfin']
 
+    - name: Import 'immich' tasks
+      ansible.builtin.import_tasks: tasks/immich.yml
+      tags: ['immich']
+
   handlers:
     - name: Restart sshd
       ansible.builtin.service:

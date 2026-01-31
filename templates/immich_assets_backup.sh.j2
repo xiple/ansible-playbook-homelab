@@ -1,0 +1,8 @@
+#!/bin/bash
+
+LOG_FILE=~/logs/$(basename $0 .sh).log
+
+date > $LOG_FILE
+cp -Rauv {{ immich_assets_path }} {{ immich_assets_dst_backup_path }} >> $LOG_FILE
+
+exit 0
