@@ -9,6 +9,8 @@ homelab_user_dirs:
   - "~{{ homelab_user}}/apps/jellyfin/config"
   - "~{{ homelab_user}}/apps/jellyfin/cache"
   - "~{{ homelab_user}}/apps/immich"
+  - "~{{ homelab_user}}/scripts"
+  - "~{{ homelab_user}}/logs"
 
 java_version: 21
 homelab_packages:
