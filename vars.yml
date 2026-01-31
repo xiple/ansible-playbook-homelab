@@ -25,6 +25,7 @@ homelab_packages:
   - exif
   - tree
   - stow
+  - cron
 
 homelab_packages_state: present
 
