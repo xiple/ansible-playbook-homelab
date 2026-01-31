@@ -18,7 +18,6 @@ homelab_packages:
   - git
   - python3-venv
   - "openjdk-{{ java_version }}-jdk"
-  - ethtool
   - sysstat
   - fastfetch
   - exif
