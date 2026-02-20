@@ -70,3 +70,5 @@ immich_assets_backup_script_template_name: immich_assets_backup.sh.j2
 immich_assets_backup_scripts_path: "~{{ homelab_user }}/scripts/immich_assets_backup.sh"
 immich_assets_path: "~{{ homelab_user }}/apps/immich/library"
 immich_assets_dst_backup_path: /mnt/wd1tb
+
+tailscale_ip_forwarding_enable: true
